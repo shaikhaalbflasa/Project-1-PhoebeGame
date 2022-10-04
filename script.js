@@ -50,12 +50,14 @@ function handleClick(event) {
     // find the div that has the same index as that letter and change the innerHTML to match it\
     let letter ;
     
-
+  for (let i=0; i<tries ; i++){
     tries--
+
+   }
     
-    if (tries == 0){
-        console.log("game is over")
-    }
+    // if (tries == 0){
+    //     console.log("game is over")
+    // }
 
     text.forEach(function(element, index) {
         //   console.log(element);
