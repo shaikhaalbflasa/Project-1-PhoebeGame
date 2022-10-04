@@ -10,33 +10,32 @@ let start = document.querySelector('.start-button')
 //the words for the game
 let words= ['Rachel Karen Green','Monica Geller','Ross Geller','Ursula Buffay','Chandler Muriel Bing']
 
-// start.addEventListener('click', startplay)
-// let word;
-// let text;
+start.addEventListener('click', startplay)
+let word;
+let text;
+function startplay (){
+    image.style.backgroundImage = "url('img/guitar1.png')"
+    word = words[Math.floor(Math.random() * words.length)];
+    console.log(word);
+    text = word.split(' ')
+    text.forEach(function(name,index) {
+        for (let i = 0; i < name.length; i++) {
+          let newSpot = document.createElement('span')
+          newSpot.id = `${index}-${i}`
+          newSpot.innerHTML = ' _ '
+          gameLetter.appendChild(newSpot)
+        }
+        // let emptySpot = document.createElement('br')
+        let emptySpot = document.createElement('span')
+        emptySpot.innerHTML = '&nbsp;&nbsp;&nbsp;'
+        gameLetter.appendChild(emptySpot)
+    })
+}
 
 
 
-image.style.backgroundImage = "url('img/guitar1.png')"
-let word = words[Math.floor(Math.random() * words.length)];
-console.log(word);
+// console.log(text)
 
-
-
-let text = word.split(' ')
-console.log(text)
-text.forEach(function(name,index) {
-    for (let i = 0; i < name.length; i++) {
-      let newSpot = document.createElement('span')
-      newSpot.id = `${index}-${i}`
-      newSpot.innerHTML = ' _ '
-      gameLetter.appendChild(newSpot)
-    }
-    // let emptySpot = document.createElement('br')
-    let emptySpot = document.createElement('span')
-    emptySpot.innerHTML = '&nbsp;&nbsp;&nbsp;'
-    gameLetter.appendChild(emptySpot)
-
-})
   
   
 gameKeyboard.addEventListener('click', handleClick)
@@ -49,11 +48,34 @@ function handleClick(event) {
     // if(text.includes(userLetter)){
     // find the div that has the same index as that letter and change the innerHTML to match it\
     let letter ;
-    
-
     tries--
+    // rmImage.toString();
+   if (tries == 0){
+    // console.log("hudhuhu")
+   // Get the modal
+            let modal = document.getElementById("myModal");
 
-   
+            // Get the <span> element that closes the modal
+            const span = document.getElementsByClassName("close")[0];
+
+            // document.getElementById("myModal").style.display = "block";
+
+            modal.style.display = "block";
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+   }else{
+    console.log("hds jdh")
+   }
     
     // if (tries == 0){
     //     console.log("game is over")
