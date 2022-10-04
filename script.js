@@ -1,5 +1,5 @@
 //get the html elements
-let tries = 6;
+let tries = 7;
 let gameLetter = document.querySelector('.game-letter')
 let gameKeyboard = document.querySelector('.game-keyboard')
 let image = document.getElementById('game-img')
@@ -95,7 +95,7 @@ function handleClick(event) {
            
         }else{
             rmImage(tries)
-            console.log("not working this")
+            
         }
       }
     })
@@ -105,27 +105,27 @@ function handleClick(event) {
 function rmImage(tries){
     console.log('tries',tries)
     switch(tries.toString()){
-        case "6":
+        case "5":
             image.style.backgroundImage = "url('img/guitar2.png')";
         break;
-        case "5":
+        case "4":
             image.style.backgroundImage = "url('img/guitar3.png')";
         break;
-        case "4":
+        case "3":
             image.style.backgroundImage = "url('img/guitar4.png')";
         break;
-        case "3":
+        case "2":
             image.style.backgroundImage = "url('img/guitar5.png')";
         break;
-        case "2":
+        case "1":
             image.style.backgroundImage = "url('img/guitar6.png')";
         break;
-        case "1":
+        case "0":
             image.style.backgroundImage = "url('img/guitar7.png')";
         break;
-        default:
-            image.style.backgroundImage = "url('img/guitar1.png')";
-            break;
+        // default:
+        //     image.style.backgroundImage = "url('img/guitar1.png')";
+        // break;
     }
 };
 
