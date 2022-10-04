@@ -1,5 +1,5 @@
 //get the html elements
-let tries = 7;
+let tries = 6;
 let gameLetter = document.querySelector('.game-letter')
 let gameKeyboard = document.querySelector('.game-keyboard')
 let image = document.getElementById('game-img')
@@ -16,7 +16,7 @@ let words= ['Rachel Karen Green','Monica Geller','Ross Geller','Ursula Buffay','
 
 
 
-image.style.backgroundImage = "url('./img/guitar1.png')"
+image.style.backgroundImage = "url('img/guitar1.png')"
 let word = words[Math.floor(Math.random() * words.length)];
 console.log(word);
 
@@ -50,10 +50,10 @@ function handleClick(event) {
     // find the div that has the same index as that letter and change the innerHTML to match it\
     let letter ;
     
-  for (let i=0; i<tries ; i++){
+
     tries--
 
-   }
+   
     
     // if (tries == 0){
     //     console.log("game is over")
@@ -83,26 +83,26 @@ function handleClick(event) {
 function rmImage(tries){
     console.log('tries',tries)
     switch(tries.toString()){
-        case "1":
-            image.style.backgroundImage = "url('./img/guitar7.png')";
-        break;
-        case "2":
-            image.style.backgroundImage = "url('./img/guitar6.png')";
-        break;
-        case "3":
-            image.style.backgroundImage = "url('./img/guitar5.png')";
-        break;
-        case "4":
-            image.style.backgroundImage = "url('./img/guitar4.png')";
+        case "6":
+            image.style.backgroundImage = "url('img/guitar2.png')";
         break;
         case "5":
-            image.style.backgroundImage = "url('./img/guitar3.png')";
+            image.style.backgroundImage = "url('img/guitar3.png')";
         break;
-        case "6":
-            image.style.backgroundImage = "url('./img/guitar2.png')";
+        case "4":
+            image.style.backgroundImage = "url('img/guitar4.png')";
+        break;
+        case "3":
+            image.style.backgroundImage = "url('img/guitar5.png')";
+        break;
+        case "2":
+            image.style.backgroundImage = "url('img/guitar6.png')";
+        break;
+        case "1":
+            image.style.backgroundImage = "url('img/guitar7.png')";
         break;
         default:
-            image.style.backgroundImage = "url('./img/guitar1.png')";
+            image.style.backgroundImage = "url('img/guitar1.png')";
             break;
     }
 };
