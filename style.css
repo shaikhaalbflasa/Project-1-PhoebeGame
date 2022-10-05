@@ -30,31 +30,40 @@ span {
     margin: 20px 50px 0px 20px;
 }
 
-.center {
+.center-the-game {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-}
-
-#game-img{
-    border: 2px solid orange;
-    height: 40vh;
-    width: 40vw;
-    background-repeat: no-repeat;
 }
 
 .game-letter {
     border: 2px solid palevioletred;
     height: 20vh;
     width: 40vw; 
-    margin: 80px 0px 0px 30px;  
+    margin: 40px 0px 0px 30px;  
+    text-align: center;
 }
+
+.button-the-game {
+    display:flex;  
+}
+
+#game-img{
+    border: 2px solid orange;
+    height: 55vh;
+    width: 20vw;
+    background-repeat: no-repeat;
+    margin-left: 300px;
+   
+}
+
 
 .game-keyboard {
     border: 2px solid greenyellow;
-    height: 30vh;
-    width: 60vw;
-    margin: 20px 0px 40px 20px ;
+    height: 40vh;
+    width: 50vw;
+    margin: 100px 0px 0px 50px;
+   
 }
 
 .line-1 {
@@ -68,8 +77,8 @@ span {
 }
 
 
-/* The Modal (background) */
-.modal {
+/* The Modal1 (background) */
+.modal1 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -106,3 +115,43 @@ span {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* The Modal2 (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+  
+/* The Close Button */
+.close2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close2:hover,
+  .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+

@@ -4,6 +4,7 @@ let gameKeyboard = document.querySelector('.game-keyboard')
 let image = document.getElementById('game-img')
 let start = document.querySelector('.start-button')
 let reset = document.querySelector('.reset-button')
+let remaintesies = document.querySelector('.teries-remain')
 
 // varibles 
 let tries = 6;
@@ -13,8 +14,15 @@ let letter ;
 
 
 //the game array
-let words= ['Rachel Karen Green','Monica Geller','Ross Geller','Ursula Buffay','Chandler Muriel Bing']
+// let words= ['Rachel Karen Green','Monica Geller','Ross Geller','Ursula Buffay','Chandler Muriel Bing']
+let words = ['test']
 
+
+// let wordPairs = [
+//     {hint: 'Starts with R', name: 'Racel Karen Green'},
+//     {hint: 'Starts with R', name: 'Racel Karen Green'},
+//     {hint: 'Starts with R', name: 'Racel Karen Green'},
+// ]
 
 //make the button start cliklable
 // start.addEventListener('click', startthegame)
@@ -44,6 +52,7 @@ function startthegame (){
 //make the button keyboard key cliklable
 gameKeyboard.addEventListener('click', handleClick)
 
+let totalLettersAdded = 0
 //function for the click keyboard button
 function handleClick(event) {
     console.log(event.target.innerText)
@@ -54,7 +63,6 @@ function handleClick(event) {
     
     
     console.log('text,', text)
-    let totalLettersAdded
     let lettersAdded = 0
     text.forEach(function(element, index) {
         //   console.log(element);
@@ -82,18 +90,12 @@ function handleClick(event) {
             }else if (tries == 0){
                 console.log("inside tries == 0")
                 // Get the modal
-                let modal = document.getElementById("myModal");
+                let modal = document.getElementById("lossModal");
 
-            
-
-                    modal.style.display = "block";
-                  
-
-                
+                modal.style.display = "block";
                 // Get the <span> element that closes the modal
                 const span = document.getElementsByClassName("close")[0];
                 
-                // document.getElementById("myModal").style.display = "block";
                 
                 
                 // When the user clicks on <span> (x), close the modal
@@ -108,56 +110,61 @@ function handleClick(event) {
                     }
                 }
             }else{
-            console.log("You have this many chances left: " + tries)
+            remaintesies.innerText="You have this many chances left: " + tries
+            // console.log("You have this many chances left: " + tries)
             }
             rmImage(tries)
             
         }
+
+        console.log("Im here ")
+        console.log("totallettersadded " + totalLettersAdded)
+        console.log("length " + text.toString().length)
+        if (totalLettersAdded == text.toString().length){
+            console.log("Im here 2 ")
+
+            // Get the modal
+            let modal2 = document.getElementById("winModal");
+
+            modal2.style.display = "block";
+            // Get the <span> element that closes the modal
+            const span = document.getElementsByClassName("close2")[0];
+            
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal2.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+            }
+
+        }
         
-     // if (tries == 0){
-        //         console.log("inside tries == 0")
-        //         // Get the modal
-        //         let modal = document.getElementById("myModal");
-                
-        //         // Get the <span> element that closes the modal
-        //         const span = document.getElementsByClassName("close")[0];
-                
-        //         // document.getElementById("myModal").style.display = "block";
-                
-        //         modal.style.display = "block";
-                
-        //         // When the user clicks on <span> (x), close the modal
-        //         span.onclick = function() {
-        //             modal.style.display = "none";
-        //         }
-                
-        //         // When the user clicks anywhere outside of the modal, close it
-        //         window.onclick = function(event) {
-        //             if (event.target == modal) {
-        //                 modal.style.display = "none";
-        //             }
-        //         }
-        // }else{
-        //     console.log("You have this many chances left: " + tries)
-        // }
+     
+         
         //if (totalLettersAdded == // total length of the name)
         // user wins
-    }  
+}  
     
-    //function for the imag switch basedon the tries numbers
-    function rmImage(tries){
+//function for the imag switch basedon the tries numbers
+function rmImage(tries){
         console.log('tries',tries)
         switch(tries.toString()){
-            case "5":
-                image.style.backgroundImage = "url('img/guitar2.png')";
-                break;
-                case "4":
-                    image.style.backgroundImage = "url('img/guitar3.png')";
-                    break;
-                    case "3":
-                        image.style.backgroundImage = "url('img/guitar4.png')";
-                        break;
-                        case "2":
+        case "5":
+        image.style.backgroundImage = "url('img/guitar2.png')";
+        break;
+        case "4":
+        image.style.backgroundImage = "url('img/guitar3.png')";
+        break;
+        case "3":
+        image.style.backgroundImage = "url('img/guitar4.png')";
+        break;
+        case "2":
         image.style.backgroundImage = "url('img/guitar5.png')";
         break;
         case "1":
@@ -177,10 +184,12 @@ function handleClick(event) {
 //make the button reset cliklable                               
 reset.addEventListener('click', resetthegame)
                                 
- //function for the click reset button                               
+//function for the click reset button                               
 function resetthegame (){
  gameLetter.innerHTML = ''
- tries=6;
+ remaintesies.innerText= ''
+ tries = 6;
+ totalLettersAdded = 0;
   startthegame()
 }
                                 
