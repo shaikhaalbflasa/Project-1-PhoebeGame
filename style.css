@@ -1,12 +1,41 @@
 h1 {
-    color: rgb(218, 57, 20);
+    color:rgb(227, 180, 118);
     text-align: center;
     margin-top: 40px;
     font-style: italic;
 }
 
+h2{
+    color:rgb(227, 180, 118);
+    text-align: center;
+    margin-top: 150px;
+    font-style: italic;
+    font-size: 50px;
+
+}
+.game-page1 {
+  /* border: 2px solid salmon; */
+  margin-top: 90px;
+  text-align: center;
+}
+
+.start-button , .game-instructions {
+    margin: 20px 0px 20px 0px;
+    background-color: orange;
+    border: none;
+    border-radius: 50%;
+    padding: 30px;
+    /* the syle of the Text inside button */
+    font-size: 20px;
+    text-align: center;
+    color: rgb(21, 18, 18);
+
+
+}
+
+
 span {
-    color: rgb(108, 180, 219);
+    color: orange;
 }
 
 /* body{
@@ -55,11 +84,6 @@ span {
     background-repeat: no-repeat;
     margin-left: 300px; 
 }
-
-
-
-
-
 .game-keyboard {
     border: 2px solid greenyellow;
     height: 40vh;
@@ -67,29 +91,25 @@ span {
     margin: 100px 0px 0px 50px;
 }
 
-.key{
+.key  {
     /* background: */
-     background-image: url('./img/button\ img.png');
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
+    background-image: url('./img/button\ img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
  
  
-     border: none;
-     border-radius: 50%;
-     padding: 20px;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
   
      
-     /* Text inside button styling */
+    /* the syle of the Text inside button */
      font-size: 20px;
      text-align: center;
      color: rgb(21, 18, 18);
 
 }   
-
-
-
-
 
 /* The Modal1 (background) */
 .modal1 {

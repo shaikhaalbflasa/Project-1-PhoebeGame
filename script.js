@@ -2,20 +2,18 @@
 let gameLetter = document.querySelector('.game-letter')
 let gameKeyboard = document.querySelector('.game-keyboard')
 let key = document.querySelector('.key')
-
 let image = document.getElementById('game-img')
 let start = document.querySelector('.start-button')
 let reset = document.querySelector('.reset-button')
 let remaintesies = document.querySelector('.teries-remain')
 let gameHint = document.querySelector('.game-hint')
 
-
 // varibles 
 let tries = 6;
 let word;
 let text;
 let letter ;
-
+let totalLettersAdded = 0
 
 //the game array
 let words = [
@@ -23,8 +21,6 @@ let words = [
     {hint: 'Starts with M', name: 'Monica Geller'},
     {hint: 'Starts with R and G', name: 'Ross Geller'},
 ]
-
-
 
 //function for the click start button
 function startthegame (){
@@ -49,16 +45,8 @@ function startthegame (){
     })
 }
 
-
-
-
 //make the button keyboard key cliklable
 gameKeyboard.addEventListener('click', handleClick)
-
-
-
-
-let totalLettersAdded = 0
 //function for the click keyboard button
 function handleClick(event) {
     console.log(event.target.innerText)
@@ -154,8 +142,7 @@ function handleClick(event) {
      
          
        
-}  
-    
+}     
 //function for the imag switch basedon the tries numbers
 function rmImage(tries){
         console.log('tries',tries)
@@ -183,12 +170,9 @@ function rmImage(tries){
        // break;
     }  
 };
-                             
-
-
+                            
 //make the button reset cliklable                               
-reset.addEventListener('click', resetthegame)
-                                
+reset.addEventListener('click', resetthegame)                               
 //function for the click reset button                               
 function resetthegame (){
  gameLetter.innerHTML = ''
@@ -196,8 +180,7 @@ function resetthegame (){
  remaintesies.innerText= ''
  tries = 6;
  totalLettersAdded = 0;
-
- for(let i = 0 ; i < document.getElementsByTagName('button').length ; i++){
+  for(let i = 0 ; i < document.getElementsByTagName('button').length ; i++){
     document.getElementsByTagName('button')[i].style = '';
   }
   startthegame()
