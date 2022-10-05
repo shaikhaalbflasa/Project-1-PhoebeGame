@@ -10,9 +10,9 @@ span {
 }
 
 /* body{
-    background-image: url(/img/fd.jpeg);
+    background-image: url(/img/download.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     background-attachment: fixed;
     background-position: center;
 } */
@@ -23,7 +23,7 @@ span {
     margin: 0 auto;
 }
 
-.game-rule {
+.game-hint {
     border: 2px solid blue;
     height: 10vh;
     width: 10vw; 
@@ -53,8 +53,7 @@ span {
     height: 55vh;
     width: 20vw;
     background-repeat: no-repeat;
-    margin-left: 300px;
-   
+    margin-left: 300px; 
 }
 
 

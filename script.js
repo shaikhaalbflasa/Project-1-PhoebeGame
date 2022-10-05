@@ -5,6 +5,7 @@ let image = document.getElementById('game-img')
 let start = document.querySelector('.start-button')
 let reset = document.querySelector('.reset-button')
 let remaintesies = document.querySelector('.teries-remain')
+let gameHint = document.querySelector('.game-hint')
 
 // varibles 
 let tries = 6;
@@ -15,14 +16,13 @@ let letter ;
 
 //the game array
 // let words= ['Rachel Karen Green','Monica Geller','Ross Geller','Ursula Buffay','Chandler Muriel Bing']
-let words = ['test']
-
-
-// let wordPairs = [
-//     {hint: 'Starts with R', name: 'Racel Karen Green'},
-//     {hint: 'Starts with R', name: 'Racel Karen Green'},
-//     {hint: 'Starts with R', name: 'Racel Karen Green'},
-// ]
+// let words = ['test']
+let hintword;
+let wordPairs = [
+    {hint: 'Starts with R', name: 'Racel Karen Green'},
+    {hint: 'Starts with M', name: 'Monica Geller'},
+    {hint: 'Starts with R and G', name: 'Ross Geller'},
+]
 
 //make the button start cliklable
 // start.addEventListener('click', startthegame)
@@ -30,16 +30,20 @@ let words = ['test']
 //function for the click start button
 function startthegame (){
     image.style.backgroundImage = "url('img/guitar1.png')"
-    word = words[Math.floor(Math.random() * words.length)];
+    let randNum = Math.floor(Math.random() * wordPairs.length) 
+    word = wordPairs[randNum].name;
     console.log(word);
+    console.log(wordPairs[0][1])
+    gameHint.innerHTML=wordPairs[randNum].hint
+
     text = word.split(' ')
     // console.log(text)
     text.forEach(function(name,index) {
         for (let i = 0; i < name.length; i++) {
-          let newSpot = document.createElement('span')
-          newSpot.id = `${index}-${i}`
-          newSpot.innerHTML = ' _ '
-          gameLetter.appendChild(newSpot)
+            let newSpot = document.createElement('span')
+            newSpot.id = `${index}-${i}`
+            newSpot.innerHTML = ' _ '
+            gameLetter.appendChild(newSpot)
         }
         // let emptySpot = document.createElement('br')
         let emptySpot = document.createElement('span')
@@ -48,6 +52,7 @@ function startthegame (){
     })
 }
 
+// hintword=wordPairs[0][0]
 
 //make the button keyboard key cliklable
 gameKeyboard.addEventListener('click', handleClick)
@@ -187,6 +192,7 @@ reset.addEventListener('click', resetthegame)
 //function for the click reset button                               
 function resetthegame (){
  gameLetter.innerHTML = ''
+ gameHint.innerHTML= ' '
  remaintesies.innerText= ''
  tries = 6;
  totalLettersAdded = 0;
