@@ -9,11 +9,13 @@ span {
     color: rgb(108, 180, 219);
 }
 
-body{
+/* body{
     background-image: url(/img/fd.jpeg);
-   
-
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+} */
 
 .game-container {
     border: 2px solid red;
@@ -39,9 +41,6 @@ body{
     height: 40vh;
     width: 40vw;
     background-repeat: no-repeat;
-   
-   
-   
 }
 
 .game-letter {

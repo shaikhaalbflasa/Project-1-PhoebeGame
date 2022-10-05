@@ -8,7 +8,7 @@
     <script defer src="/script.js"></script>
     <title>Phoebe Buffay Game</title>
 </head>
-<body>
+<body onload="startthegame()">
     <h1>Phoebe<span> Buffay </span>Game</h1>
     <div class="game-container">
 
@@ -57,26 +57,20 @@
 
         </div>
       
-        <div class="start-button" >
-            <button class="start-button">start</button>
-
-            <div class="contol-bar" >
-               <!-- The Modal -->
-               <div id="myModal" class="modal">
-            
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Oh noo game over, try agian </p>
-              </div>
-            
-                 </div>
-            </div>
+      <div class="game-buttons" >
+            <button class="reset-button">Reset</button>
+     </div>
 
 
-        </div>
-        
-        
+       <!-- The Modal -->
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+          <div class="modal-content">
+         <span class="close">&times;</span>
+         <p>Oh no .. </p>
+      </div>
+  
+      </div>
 
     </div>
     
