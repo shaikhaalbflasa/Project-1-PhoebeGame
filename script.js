@@ -1,6 +1,8 @@
 //get the html elements
 let gameLetter = document.querySelector('.game-letter')
 let gameKeyboard = document.querySelector('.game-keyboard')
+let key = document.querySelector('.key')
+
 let image = document.getElementById('game-img')
 let start = document.querySelector('.start-button')
 let reset = document.querySelector('.reset-button')
@@ -49,15 +51,22 @@ function startthegame (){
 
 
 
+
 //make the button keyboard key cliklable
 gameKeyboard.addEventListener('click', handleClick)
+
+
+
 
 let totalLettersAdded = 0
 //function for the click keyboard button
 function handleClick(event) {
     console.log(event.target.innerText)
     let userLetter = event.target.innerText;
-    event.target.style.backgroundColor = 'black'
+    event.target.style.backgroundImage = "url('img/guitar1.png')";
+
+   
+   
 
 
    
@@ -187,7 +196,6 @@ function resetthegame (){
  remaintesies.innerText= ''
  tries = 6;
  totalLettersAdded = 0;
-//   handleClick()
 
  for(let i = 0 ; i < document.getElementsByTagName('button').length ; i++){
     document.getElementsByTagName('button')[i].style = '';
