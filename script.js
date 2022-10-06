@@ -8,12 +8,30 @@ let reset = document.querySelector('.reset-button')
 let remaintesies = document.querySelector('.teries-remain')
 let gameHint = document.querySelector('.game-hint')
 
+
+
+
 // varibles 
 let tries = 6;
 let word;
 let text;
 let letter ;
 let totalLettersAdded = 0
+
+
+
+// function for the ininstructions button
+function instructions(){
+    document.getElementById("myModalforinstructions").style.display="block"
+}
+
+function closetheinstructions(){ 
+   document.getElementById("myModalforinstructions").style.display="none"  
+}
+    
+   
+
+
 
 //the game array
 let words = [
@@ -52,11 +70,6 @@ function handleClick(event) {
     console.log(event.target.innerText)
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
-
-   
-   
-
-
    
     console.log('text,', text)
     let lettersAdded = 0
@@ -84,23 +97,23 @@ function handleClick(event) {
             }else if (tries == 0){
                 // console.log("inside tries == 0")
                 // Get the modal
-                let modal = document.getElementById("lossModal");
+                let modal2 = document.getElementById("lossModal");
 
-                modal.style.display = "block";
+                modal2.style.display = "block";
                 // Get the <span> element that closes the modal
-                const span = document.getElementsByClassName("close")[0];
+                const span = document.getElementsByClassName("close2")[0];
                 
                 
                 
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function() {
-                    modal.style.display = "none";
+                    modal2.style.display = "none";
                 }
                 
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
+                    if (event.target == modal2) {
+                        modal2.style.display = "none";
                     }
                 }
             }else{
@@ -115,25 +128,25 @@ function handleClick(event) {
         // console.log("totallettersadded " + totalLettersAdded)
         // console.log("length " + text.toString().length)
         if (totalLettersAdded == text.toString().length){
-            console.log("Im here 2 ")
+            // console.log("Im here 2 ")
 
             // Get the modal
-            let modal2 = document.getElementById("winModal");
+            let modal3 = document.getElementById("winModal");
 
-            modal2.style.display = "block";
+            modal3.style.display = "block";
             // Get the <span> element that closes the modal
-            const span = document.getElementsByClassName("close2")[0];
+            const span = document.getElementsByClassName("close3")[0];
             
             
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
-                modal2.style.display = "none";
+                modal3.style.display = "none";
             }
             
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == modal2) {
-                    modal2.style.display = "none";
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
                 }
             }
 
@@ -186,7 +199,6 @@ function resetthegame (){
   startthegame()
 }
                                 
-
 
 
 
