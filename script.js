@@ -14,6 +14,8 @@ let word;
 let text;
 let letter ;
 let totalLettersAdded = 0
+let sound= new Audio('mixkit-short-guitar-strum-2318.wav')
+
 
 
 
@@ -40,9 +42,6 @@ let words = [
     {hint: 'Characters Starts with H ', name: 'Howard'},
     {hint: 'Characters Starts with Z ', name: 'Zach Miller'},
     {hint: 'Characters Starts with M ', name: 'Michael Tribbiani'},
-    
-
-
 ]
 // console.log("this"+ words)
 
@@ -78,18 +77,21 @@ function handleClick(event) {
  
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
-    `$("...").prop("onclick", null).off("click")`
+    
 
 
     
+    let numberpush=[]
    
+    if (numberpush.includes(userLetter)){
+        return 
+    }
     
     
-   
    
     // console.log('text,', text)
     let lettersAdded = 0;
-       text.forEach(function(element, index) {
+    text.forEach(function(element, index) {
         //   console.log(element);
         for (let i=0 ; i<element.length ; i++)  {
             letter = document.getElementById(`${index}-${i}`);
@@ -99,13 +101,16 @@ function handleClick(event) {
                 letter.innerText = userLetter;
                 lettersAdded++
                 totalLettersAdded++
+                numberpush.push(userLetter)
+
+
                 
             }  
            
             
         }
         })
-        gameKeyboard.disabled = true;
+       
         if (lettersAdded == 0){
             
             
@@ -201,21 +206,27 @@ function rmImage(tries){
         switch(tries.toString()){
         case "5":
         image.style.backgroundImage = "url('img/guitar2.png')";
+        sound.play()
         break;
         case "4":
         image.style.backgroundImage = "url('img/guitar3.png')";
+        sound.play()
         break;
         case "3":
         image.style.backgroundImage = "url('img/guitar4.png')";
+        sound.play()
         break;
         case "2":
         image.style.backgroundImage = "url('img/guitar5.png')";
+        sound.play()
         break;
         case "1":
         image.style.backgroundImage = "url('img/guitar6.png')";
+        sound.play()
         break;
         case "0":
         image.style.backgroundImage = "url('img/guitar7.png')";
+        sound.play()
         break;
         // default:
        //     image.style.backgroundImage = "url('img/guitar1.png')";
