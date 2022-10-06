@@ -7,6 +7,9 @@ let start = document.querySelector('.start-button')
 let reset = document.querySelector('.reset-button')
 let remaintesies = document.querySelector('.teries-remain')
 let gameHint = document.querySelector('.game-hint')
+let buttons = document.querySelectorAll('.key')
+
+buttons.forEach(btn => btn.addEventListener('click', handleClick))
 
 // varibles 
 let tries = 6;
@@ -196,7 +199,7 @@ function handleClick(event) {
 
     
   
-     
+     event.target.removeEventListener('click', handleClick)
          
        
 }     
