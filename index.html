@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icon/guitar_music_5268.ico">
     <script defer src="/script.js"></script>
     <title>Phoebe Buffay Game</title>
 </head>
@@ -12,9 +13,8 @@
     <h1>Phoe<span>be Bu</span>ffay </h1>
     <div class="game-container">
          <div class="top-the-game">
-            <div class="game-hint"></div>
+            <div class="game-hint">HINT</div>
             <div class="teries-remain"></div>
-            <div class="worng-letter"></div>
 
         </div>
 
@@ -24,48 +24,47 @@
         </div>
 
         <div class="button-the-game">
+            
+            <div id="game-img"></div>
 
             <div class="game-keyboard">
                 
-                    <button class="key">A</button>
-                    <button class="key">B</button>
-                    <button class="key">C</button>
-                    <button class="key">D</button>
-                    <button class="key">E</button>
-                    <button class="key">F</button>
-                    <button class="key">G</button>
-                    <button class="key">H</button>
-                    <button class="key">I</button>
+                    <button class="key" onclick="handleClick(event)">A</button>
+                    <button class="key" onclick="handleClick(event)">B</button>
+                    <button class="key" onclick="handleClick(event)">C</button>
+                    <button class="key" onclick="handleClick(event)">D</button>
+                    <button class="key" onclick="handleClick(event)">E</button>
+                    <button class="key" onclick="handleClick(event)">F</button>
+                    <button class="key" onclick="handleClick(event)">G</button>
+                    <button class="key" onclick="handleClick(event)">H</button>
+                    <button class="key" onclick="handleClick(event)">I</button>
                 
-                    <button class="key">J</button>
-                    <button class="key">K</button>
-                    <button class="key">L</button>
-                    <button class="key">M</button>
-                    <button class="key">N</button>
-                    <button class="key">O</button>
-                    <button class="key">P</button>
-                    <button class="key">Q</button>
-                    <button class="key">R</button>
+                    <button class="key" onclick="handleClick(event)">J</button>
+                    <button class="key" onclick="handleClick(event)">K</button>
+                    <button class="key" onclick="handleClick(event)">L</button>
+                    <button class="key" onclick="handleClick(event)">M</button>
+                    <button class="key" onclick="handleClick(event)">N</button>
+                    <button class="key" onclick="handleClick(event)">O</button>
+                    <button class="key" onclick="handleClick(event)">P</button>
+                    <button class="key" onclick="handleClick(event)">Q</button>
+                    <button class="key" onclick="handleClick(event)">R</button>
               
-                    <button class="key">S</button>
-                    <button class="key">T</button>
-                    <button class="key">U</button>
-                    <button class="key">V</button>
-                    <button class="key">W</button>
-                    <button class="key">X</button>
-                    <button class="key">Y</button>
-                    <button class="key">Z</button>
+                    <button class="key" onclick="handleClick(event)">S</button>
+                    <button class="key" onclick="handleClick(event)">T</button>
+                    <button class="key" onclick="handleClick(event)">U</button>
+                    <button class="key" onclick="handleClick(event)">V</button>
+                    <button class="key" onclick="handleClick(event)">W</button>
+                    <button class="key" onclick="handleClick(event)">X</button>
+                    <button class="key" onclick="handleClick(event)">Y</button>
+                    <button class="key" onclick="handleClick(event)">Z</button>
                     
                 
             </div>
             
-            <div id="game-img"></div>
 
         </div>
 
-        <div class="game-buttons" >
-        <button class="reset-button">Reset</button>
-        </div>
+        
 
         <!-- The Modal for loss -->
         <div id="lossModal" class="modal2" style="display:none;">
@@ -73,7 +72,13 @@
             <div class="modal-content2">
                 <span class="close2">&times;</span>
                 <p> Oh no game over  </p>
+
+                
+                <button type="button" class="reset-button">Reset the game</button>
+        
+                 
             </div>
+            
             
             
         </div>
@@ -82,8 +87,12 @@
        <div id="winModal" class="modal3"  style="display: none;" >
         <!-- Modal content -->
          <div class="modal-content2">
-         <span class="close3">&times;</span>
-         <p> you win </p>
+            <span class="close3">&times;</span>
+            <p> you win </p>
+            
+            <button type="button" class="reset-button2">Reset the game</button>
+            
+            
          </div>
         </div>
 

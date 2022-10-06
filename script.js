@@ -8,9 +8,6 @@ let reset = document.querySelector('.reset-button')
 let remaintesies = document.querySelector('.teries-remain')
 let gameHint = document.querySelector('.game-hint')
 
-
-
-
 // varibles 
 let tries = 6;
 let word;
@@ -30,26 +27,35 @@ function closetheinstructions(){
 }
     
    
-
-
-
 //the game array
 let words = [
-    {hint: 'Starts with R', name: 'Racel Karen Green'},
-    {hint: 'Starts with M', name: 'Monica Geller'},
-    {hint: 'Starts with R and G', name: 'Ross Geller'},
+    {hint: 'Characters Starts with R', name: 'Rachel Karen Green'},
+    {hint: 'Characters Starts with M', name: 'Monica Geller'},
+    {hint: 'Characters Starts with p ', name: 'Phoebe Buffay'},
+    {hint: 'Characters Starts with u ', name: 'Ursula Buffay'},
+    {hint: 'Characters Starts with J ', name: 'Joey Tribbiani'},
+    {hint: 'Characters Starts with C ', name: 'Chandler Muriel Bing'},
+    {hint: 'Characters Starts with G', name: 'Gina Tribbiani'},
+    {hint: 'Characters Starts with R ', name: 'Ross Geller'},
+    {hint: 'Characters Starts with H ', name: 'Howard'},
+    {hint: 'Characters Starts with Z ', name: 'Zach Miller'},
+    {hint: 'Characters Starts with M ', name: 'Michael Tribbiani'},
+    
+
+
 ]
+// console.log("this"+ words)
 
 //function for the click start button
 function startthegame (){
     image.style.backgroundImage = "url('img/guitar1.png')"
     let randNum = Math.floor(Math.random() * words.length) 
     word = words[randNum].name;
-    console.log(word);
-    gameHint.innerHTML=words[randNum].hint
+    // console.log(word);
+    gameHint.innerHTML="Hint: "+ words[randNum].hint
 
     text = word.split(' ')
-    // console.log(text)
+    console.log(text)
     text.forEach(function(name,index) {
         for (let i = 0; i < name.length; i++) {
             let newSpot = document.createElement('span')
@@ -58,43 +64,58 @@ function startthegame (){
             gameLetter.appendChild(newSpot)
         }
         let emptySpot = document.createElement('span')
-        emptySpot.innerHTML = '&nbsp;&nbsp;&nbsp;'
+        emptySpot.innerHTML = '&nbsp;&nbsp;'
         gameLetter.appendChild(emptySpot)
     })
 }
 
 //make the button keyboard key cliklable
-gameKeyboard.addEventListener('click', handleClick)
+// gameKeyboard.addEventListener('click', handleClick)
+
 //function for the click keyboard button
 function handleClick(event) {
-    console.log(event.target.innerText)
+    // console.log(event.target.innerText)
+ 
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
+    `$("...").prop("onclick", null).off("click")`
+
+
+    
    
-    console.log('text,', text)
-    let lettersAdded = 0
-    text.forEach(function(element, index) {
+    
+    
+   
+   
+    // console.log('text,', text)
+    let lettersAdded = 0;
+       text.forEach(function(element, index) {
         //   console.log(element);
         for (let i=0 ; i<element.length ; i++)  {
             letter = document.getElementById(`${index}-${i}`);
             
+           
+            if (element[i].toUpperCase() === userLetter.toUpperCase()){
+                letter.innerText = userLetter;
+                lettersAdded++
+                totalLettersAdded++
                 
-               if (element[i].toUpperCase() === userLetter.toUpperCase()){
-                    console.log()
-                    letter.innerText = userLetter;
-                    lettersAdded++
-                    totalLettersAdded++
-               }   
-                   
-                
-            }
+            }  
+           
+            
+        }
         })
-        
+        gameKeyboard.disabled = true;
         if (lettersAdded == 0){
+            
+            
             tries--
             if (tries < 0) {
                 tries =  0
+                
+              
             }else if (tries == 0){
+               
                 // console.log("inside tries == 0")
                 // Get the modal
                 let modal2 = document.getElementById("lossModal");
@@ -102,6 +123,7 @@ function handleClick(event) {
                 modal2.style.display = "block";
                 // Get the <span> element that closes the modal
                 const span = document.getElementsByClassName("close2")[0];
+
                 
                 
                 
@@ -125,9 +147,9 @@ function handleClick(event) {
         }
 
         
-        // console.log("totallettersadded " + totalLettersAdded)
-        // console.log("length " + text.toString().length)
-        if (totalLettersAdded == text.toString().length){
+        console.log("totallettersadded " + totalLettersAdded)
+        console.log("total "+ text.join("").length)
+     if (totalLettersAdded == text.join("").length){
             // console.log("Im here 2 ")
 
             // Get the modal
@@ -136,6 +158,21 @@ function handleClick(event) {
             modal3.style.display = "block";
             // Get the <span> element that closes the modal
             const span = document.getElementsByClassName("close3")[0];
+
+            let resetbutton2 = document.querySelector('.reset-button2')
+            
+           resetbutton2.onclick=function(){
+                gameLetter.innerHTML = ''
+                gameHint.innerHTML= ' '
+               remaintesies.innerText= ''
+                tries = 6;
+               totalLettersAdded = 0;
+               for(let i = 0 ; i < document.getElementsByTagName('button').length ; i++){
+                document.getElementsByTagName('button')[i].style = '';
+               }
+              startthegame()
+
+            }
             
             
             // When the user clicks on <span> (x), close the modal
@@ -150,15 +187,17 @@ function handleClick(event) {
                 }
             }
 
-        }
-        
+    }
+
+    
+  
      
          
        
 }     
 //function for the imag switch basedon the tries numbers
 function rmImage(tries){
-        console.log('tries',tries)
+        // console.log('tries',tries)
         switch(tries.toString()){
         case "5":
         image.style.backgroundImage = "url('img/guitar2.png')";

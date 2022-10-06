@@ -3,6 +3,7 @@ h1 {
     text-align: center;
     margin-top: 40px;
     font-style: italic;
+    font-size: 40px;
 }
 
 h2{
@@ -21,14 +22,14 @@ h2{
 
 .start-button , .game-instructions {
     margin: 20px 0px 20px 0px;
-    background-color: orange;
+    background-color: burlywood;
     border: none;
     border-radius: 50%;
     padding: 30px;
     /* the syle of the Text inside button */
     font-size: 20px;
     text-align: center;
-    color: rgb(21, 18, 18);
+    color: orange;
 
 
 }
@@ -36,28 +37,44 @@ h2{
 
 span {
     color: orange;
+    font-size: 40px;
+
 }
 
-/* body{
-    background-image: url(/img/download.jpg);
+body{
+    background-image: url(/img/download-1.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
+    
     background-attachment: fixed;
     background-position: center;
-} */
+}
 
 .game-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height:fit-content;
     margin: 0 auto;
 }
-
+.top-the-game{
+    display: flex;
+}
 .game-hint {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+    height: 10vh;
+    width: 10vw; 
+    margin: 20px 50px 0px 0px;
+    color: orange;
+}
+
+.teries-remain{
+    /* border: 2px solid rgb(0, 255, 115); */
     height: 10vh;
     width: 10vw; 
     margin: 20px 50px 0px 20px;
+    color: orange;
+
 }
+
 
 .center-the-game {
     display: flex;
@@ -66,10 +83,10 @@ span {
 }
 
 .game-letter {
-    border: 2px solid palevioletred;
+    /* border: 2px solid palevioletred; */
     height: 20vh;
     width: 40vw; 
-    margin: 40px 0px 0px 30px;  
+    margin:0 auto ; 
     text-align: center;
 }
 
@@ -78,17 +95,17 @@ span {
 }
 
 #game-img{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     height: 55vh;
     width: 20vw;
     background-repeat: no-repeat;
-    margin-left: 300px; 
+    margin-right: 90px; 
 }
 .game-keyboard {
-    border: 2px solid greenyellow;
-    height: 40vh;
-    width: 50vw;
-    margin: 100px 0px 0px 50px;
+    /* border: 2px solid greenyellow; */
+    height: 30vh;
+    width: 40vw;
+    margin: 90px 0px  0px 50px;
 }
 
 .key  {
@@ -98,7 +115,7 @@ span {
     background-repeat: no-repeat;
     background-position: center;
  
- 
+    margin: 0 auto;
     border: none;
     border-radius: 50%;
     padding: 20px;
@@ -128,16 +145,17 @@ span {
   
 /* Modal Content */
 .modal-content1 , .modal-content2 , .modal-content3 {
-    background-color: #fefefe;
+    background-color :white;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid rgb(13, 11, 11);
     width: 80%;
+    color: burlywood;
 }
   
 /* The Close Button */
 #close1 , #close2 , #close3 {
-    color: #aaaaaa;
+    color: orange;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -145,7 +163,7 @@ span {
   
 .close1:hover,
   .close1:focus {
-    color: #000;
+    color: orange;
     text-decoration: none;
     cursor: pointer;
 }
@@ -153,17 +171,27 @@ span {
 
 .close2:hover,
   .close2:focus {
-    color: #000;
+    color: orange;
     text-decoration: none;
     cursor: pointer;
 }
 .close3:hover,
   .close3:focus {
-    color: #000;
+    color: orange;
     text-decoration: none;
     cursor: pointer;
 }
 
+
+.reset-button , .reset-button2  {
+    background-color: orange;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 20px;
+     text-align: center;
+     color: rgb(164, 98, 12);
+} 
 
 @media  only screen and (max-width: 1000px){
     .game-container{
