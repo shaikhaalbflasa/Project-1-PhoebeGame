@@ -1,55 +1,46 @@
 h1 {
-    color:rgb(227, 180, 118);
+    color:orange;
     text-align: center;
     margin-top: 40px;
-    font-style: italic;
-    font-size: 40px;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 70px;
 }
-
 h2{
-    color:rgb(227, 180, 118);
+    color:orange;
     text-align: center;
-    margin-top: 150px;
-    font-style: italic;
-    font-size: 50px;
-
+    margin-top: 200px;
+    font-size: 70px;
+    font-family: 'Noto Serif Display', serif;
 }
 .game-page1 {
   /* border: 2px solid salmon; */
   margin-top: 90px;
   text-align: center;
 }
-
-.start-button , .game-instructions {
-    margin: 20px 0px 20px 0px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 30px;
-    /* the syle of the Text inside button */
-    font-size: 20px;
-    text-align: center;
-    color: orange;
-
-
-}
-
-
 span {
     color: orange;
-    font-size: 40px;
-
+    font-size: 60px;
 }
-
 body{
     background-image: url(/img/B2.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
-    
     background-attachment: fixed;
     background-position: center;
 }
-
+.start-button , .game-instructions {
+    margin: 10px 0px 20px 0px;
+    background-color: rgb(240, 229, 214);
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    /* the syle of the Text inside button */
+    font-size: 20px;
+    text-align: center;
+    color: rgb(4, 96, 41);
+    font-family: 'Noto Serif Display', serif;
+    
+}
 .game-container {
     /* border: 2px solid red; */
     height:fit-content;
@@ -58,44 +49,50 @@ body{
 .top-the-game{
     display: flex;
 }
+.game-letter {
+    /* border: 2px solid palevioletred; */
+    height: 20vh;
+    width: 60vw; 
+    margin:0 auto ; 
+    text-align: center;
+    font-family: 'Noto Serif Display', serif;
+    
+}
 .game-hint {
     /* border: 2px solid blue; */
     height: 10vh;
     width: 10vw; 
-    margin: 20px 50px 0px 0px;
-    color: orange;
-    background-color:white;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: rgb(240, 229, 214);
+    color: rgb(4, 96, 41);
+    font-family: 'Noto Serif Display', serif;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
 }
-
-.teries-remain{
-    /* border: 2px solid rgb(0, 255, 115); */
-    height: 10vh;
-    width: 10vw; 
-    margin: 20px 50px 0px 20px;
-    color: orange;
-    background-color: white;
-
-}
-
-
 .center-the-game {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
 }
-
-.game-letter {
-    /* border: 2px solid palevioletred; */
-    height: 20vh;
-    width: 40vw; 
-    margin:0 auto ; 
-    text-align: center;
+.teries-remain{
+    /* border: 2px solid rgb(0, 255, 115); */
+    height: 10vh;
+    width: 10vw; 
+    margin: 20px 50px 0px 20px;
+    background-color: rgb(240, 229, 214);
+    color: rgb(4, 96, 41);
+    font-family: 'Noto Serif Display', serif;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px;
 }
 
 .button-the-game {
     display:flex;  
 }
-
 #game-img{
     /* border: 2px solid orange; */
     height: 55vh;
@@ -107,35 +104,35 @@ body{
     /* border: 2px solid greenyellow; */
     height: 30vh;
     width: 40vw;
-    margin: 90px 0px  0px 50px;
+    margin: 50px 0px  0px 50px;
 }
-
 .key  {
     /* background: */
-    background-image: url('./img/button\ img.png');
+    background-image: url('./img/button.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
  
-    margin: 0 auto;
+    margin: 5px;
     border: none;
-    border-radius: 50%;
+    border-radius: 12px;
     padding: 20px;
   
      
     /* the syle of the Text inside button */
-     font-size: 20px;
+     font-size: 25px;
      text-align: center;
-     color: rgb(21, 18, 18);
+     color: rgb(4, 96, 41);
+     font-family: 'Noto Serif Display', serif;
 
 }   
 
-/* The Modal1 (background) */
+/* The Modal (background) */
 .modal1 , .modal2 , .moadl3 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -147,73 +144,74 @@ body{
   
 /* Modal Content */
 .modal-content1 , .modal-content2 , .modal-content3 {
-    background-color :white;
+    background-color: rgb(240, 229, 214);
     margin: auto;
-    padding: 20px;
-    border: 1px solid rgb(13, 11, 11);
+    padding: 15px;
+    /* border: 1px solid rgb(13, 11, 11); */
     width: 80%;
-    color: burlywood;
+    color: rgb(4, 96, 41);
+    font-family: 'Noto Serif Display', serif;
 }
-  
+
+.modal-content2 , .modal-content3 {
+    padding: 0px;
+    width: 40%;
+    
+}
+
+/* #winModal{
+    margin: 0px 0px 1000px 0px;
+} */
+
+
 /* The Close Button */
 #close1 , #close2 , #close3 {
     color: orange;
     float: right;
-    font-size: 28px;
+    text-align: right;
+    font-size: 20px;
     font-weight: bold;
 }
   
-.close1:hover,
-  .close1:focus {
-    color: orange;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-.close2:hover,
-  .close2:focus {
-    color: orange;
-    text-decoration: none;
-    cursor: pointer;
-}
-.close3:hover,
-  .close3:focus {
-    color: orange;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-.reset-button , .reset-button2  {
-    background-color: orange;
-    border: none;
-    border-radius: 50%;
-    padding: 20px;
+/* The reset Button */
+.reset-button1 , .reset-button2, .return  {
+    background-color: rgb(240, 229, 214);
+    border: 2px solid orange;
+    border-radius: 12px;
+    /* padding: 15px; */
     font-size: 20px;
-     text-align: center;
-     color: rgb(164, 98, 12);
+    font-family: 'Noto Serif Display', serif;
+    text-align: center;
+    margin: 0px 0px 20px 20px;
+    
+    color:rgb(4, 96, 41);
 } 
 
-@media  only screen and (max-width: 1000px){
+p{
+    color: rgb(4, 96, 41);
+    font-family: 'Noto Serif Display', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media  only screen and (max-width: 650px){
     .game-container{
         height:fit-content;
       margin: 0 auto;
 
     }
 
-    .game-keyboard {
-        height: 20vh;
-        width: 250vw;
-        margin: 50px 0px 0px 25px;
+    .top-the-game{
+        display: inline-block;
     }
 
-    #game-img{
+    .center-the-game {
+        display: inline-block;
         
-        height: 25vh;
-        width: 20vw;
-        background-repeat: no-repeat;
-        margin-right: 200px;
+    }
+
+    .button-the-game {
+        display: inline-flex;  
     }
 
 
