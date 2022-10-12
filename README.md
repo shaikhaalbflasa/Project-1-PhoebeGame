@@ -12,7 +12,7 @@ GAME Description
 
 Live Site
 ====================
-[Phoebe Buffay Game link](https://shaikhaalbflasa.github.io/Project-1-PhoebeGame/)
+[Phoebe Buffay Game link](https://shaikhaalbflasa.github.io/Project-1-PhoebeGame/start.html)
 
 
 
