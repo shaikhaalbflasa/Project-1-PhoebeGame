@@ -60,7 +60,7 @@ function startthegame (){
     gameHint.innerHTML="Hint: "+ words[randNum].hint
 
     text = word.split(' ')
-    // console.log(text)
+    console.log(text)
     //make the -- for the use click letter
     text.forEach(function(name,index) {
         for (let i = 0; i < name.length; i++) {
