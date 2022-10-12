@@ -45,8 +45,9 @@ let words = [
 ]
 
 
-console.log(document.uerySelector('body')
+console.log(document.querySelector('body'))
 document.querySelector('body').addEventListener('DOMContentLoaded', startthegame)
+startthegame()
 
 //-------function for the click start button------
 function startthegame (){
