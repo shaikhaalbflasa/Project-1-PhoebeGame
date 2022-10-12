@@ -51,6 +51,7 @@ startthegame()
 
 //-------function for the click start button------
 function startthegame (){
+    debugger
     //show the imag when start the game
     image.style.backgroundImage = "url('img/guitar1.png')"
     //randon the obj 
