@@ -85,7 +85,7 @@ function handleClick(event) {
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
     
-    // console.log('text,', text)
+    console.log('text,', text)
     let lettersAdded = 0;
     text.forEach(function(element, index) {
         //   console.log(element);
