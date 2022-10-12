@@ -51,7 +51,6 @@ startthegame()
 
 //-------function for the click start button------
 function startthegame (){
-    debugger
     console.log('start ran!')
     //show the imag when start the game
     image.style.backgroundImage = "url('img/guitar1.png')"
@@ -84,7 +83,6 @@ buttons.forEach(btn => btn.addEventListener('click', handleClick))
 
 //------function for the click keyboard button------
 function handleClick(event) {
-    debugger
     // console.log(event.target.innerText)
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
