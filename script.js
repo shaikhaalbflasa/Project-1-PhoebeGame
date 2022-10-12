@@ -44,6 +44,8 @@ let words = [
     {hint: 'Characters Starts with M ', name: 'Michael Tribbiani'},
 ]
 
+document.body.addEventListener('DOMContentLoaded', startthegame)
+
 //-------function for the click start button------
 function startthegame (){
     //show the imag when start the game
