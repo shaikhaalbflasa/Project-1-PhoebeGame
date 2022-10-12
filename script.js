@@ -44,6 +44,8 @@ let words = [
     {hint: 'Characters Starts with M ', name: 'Michael Tribbiani'},
 ]
 
+
+console.log(document.uerySelector('body')
 document.querySelector('body').addEventListener('DOMContentLoaded', startthegame)
 
 //-------function for the click start button------
