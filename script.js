@@ -83,6 +83,7 @@ buttons.forEach(btn => btn.addEventListener('click', handleClick))
 
 //------function for the click keyboard button------
 function handleClick(event) {
+    debugger
     // console.log(event.target.innerText)
     let userLetter = event.target.innerText;
     event.target.style.backgroundImage = "url('img/guitar1.png')";
