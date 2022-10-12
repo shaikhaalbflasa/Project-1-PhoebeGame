@@ -22,7 +22,7 @@ span {
     font-size: 60px;
 }
 body{
-    background-image: url(/img/B2.jpg);
+    background-image: url(./img/B2.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
