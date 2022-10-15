@@ -48,7 +48,7 @@ let words = [
 console.log(document.querySelector('body'))
 // document.querySelector('body').addEventListener('DOMContentLoaded', startthegame)
 let body= document.querySelector('body')
-body= addEventListener('DOMContentLoaded', startthegame)
+body= addEventListener('click', startthegame)
 
 // startthegame()
 
