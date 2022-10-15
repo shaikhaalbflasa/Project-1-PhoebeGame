@@ -61,10 +61,10 @@ function startthegame (){
     let randNum = Math.floor(Math.random() * words.length) 
     //take the name only from the random obj
     word = words[randNum].name;
-    console.log(word);
+//     console.log(word);
     gameHint.innerHTML="Hint: "+ words[randNum].hint
 
-    text = word.split(' ')
+//     text = word.split(' ')
     console.log(text)
     //make the -- for the use click letter
     text.forEach(function(name,index) {
@@ -132,7 +132,7 @@ function handleClick(event) {
                     document.getElementsByTagName('button')[i].style = '';
                    }
                   startthegame()
-                  modal2.innerHTML = ''
+                  document.getElementById("lossModal").style.display="none"  
                    
     
                 }
