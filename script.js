@@ -132,7 +132,7 @@ function handleClick(event) {
                     document.getElementsByTagName('button')[i].style = '';
                    }
                   startthegame()
-                  document.getElementById("lossModal").style.display="none"  
+                  
                    
     
                 }
