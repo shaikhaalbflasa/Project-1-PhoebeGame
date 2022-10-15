@@ -132,6 +132,8 @@ function handleClick(event) {
                     document.getElementsByTagName('button')[i].style = '';
                    }
                   startthegame()
+                  modal2.innerHTML = ''
+                   
     
                 }
                 
