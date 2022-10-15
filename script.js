@@ -56,7 +56,7 @@ body= addEventListener('click', startthegame)
 function startthegame (){
     console.log('start ran!')
     //show the imag when start the game
-    image.style.backgroundImage = "url('img/guitar1.png')"
+    image.style.backgroundImage = "url('/Project-1-PhoebeGame/img/guitar1.png')"
     //randon the obj 
     let randNum = Math.floor(Math.random() * words.length) 
     //take the name only from the random obj
