@@ -50,6 +50,9 @@ console.log(document.querySelector('body'))
 // let body= document.querySelector('body')
 // body= addEventListener('click', startthegame)
 
+document.querySelector('body').addEventListener('DOMContentLoaded', startthegame)
+
+
 // startthegame()
 
 //-------function for the click start button------
